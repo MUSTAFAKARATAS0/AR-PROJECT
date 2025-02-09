@@ -1,76 +1,67 @@
-🚀 AR-DİSTANCE-PROJECT 🚀
+# 🚀 AR-DİSTANCE-PROJECT 🚀
 
-📋Proje Genel Bakışı📋
+## 📋 Proje Genel Bakışı 📋
 
-Hedef Kitle: Çocuklar
-Platform: Artırılmış Gerçeklik (AR) tabanlı eğitim uygulaması
-Geliştirme Ortamı: Unity + Orevly Uygulaması
-Amaç: AR teknolojisi ile etkileşimli öğrenme deneyimi sunarak, çocukların tarih ve diğer eğitici konuları keşfetmelerini sağlamak.
-Temel Özellikler
+- **Hedef Kitle:** Çocuklar
+- **Platform:** Artırılmış Gerçeklik (AR) tabanlı eğitim uygulaması
+- **Geliştirme Ortamı:** Unity + Orevly Uygulaması
+- **Amaç:** AR teknolojisi ile etkileşimli öğrenme deneyimi sunarak, çocukların tarih ve diğer eğitici konuları keşfetmelerini sağlamak.
 
-Interaktif AR Oyunları: Çocukların eğlenceli ve öğretici deneyimler yaşamalarını sağlayan dinamik AR oyunları.
-Dinamik Buton Mekaniği: Uygulamada, belirlenen alanda rastgele yerleştirilen butonlar arasında mesafe hesaplaması yapılır.
-Kazanan Buton: Buton çiftleri arasındaki mesafeler hesaplanır. Tıklanan buton çifti, hesaplanan en uzun mesafeye eşit olduğunda oyuncu "Kazandınız" ekranına yönlendirilir.
-Kaybeden Buton: Diğer durumlarda, oyuncu "Kaybettiniz" ekranına yönlendirilir.
-Rastgele Buton Dağılımı: ButtonSpawner scripti ile butonlar, belirlenen spawn alanı içerisinde rastgele konumlandırılır.
-Mesafe Hesaplaması: DistanceCalculator scripti, sahnedeki tüm butonlar arasındaki mesafeleri hesaplayarak en uzun mesafeyi belirler.
-Kullanıcı Dostu Arayüz: Çocukların kolayca kullanabilmesi için renkli ve sezgisel bir tasarım sunar.
+## 📌 Temel Özellikler
 
+- **Interaktif AR Oyunları:** Çocukların eğlenceli ve öğretici deneyimler yaşamalarını sağlayan dinamik AR oyunları.
+- **Dinamik Buton Mekaniği:** Uygulamada, belirlenen alanda rastgele yerleştirilen butonlar arasında mesafe hesaplaması yapılır.
+- **Kazanan Buton:** Buton çiftleri arasındaki mesafeler hesaplanır. Tıklanan buton çifti, hesaplanan en uzun mesafeye eşit olduğunda oyuncu "Kazandınız" ekranına yönlendirilir.
+- **Kaybeden Buton:** Diğer durumlarda, oyuncu "Kaybettiniz" ekranına yönlendirilir.
+- **Rastgele Buton Dağılımı:** `ButtonSpawner` scripti ile butonlar, belirlenen spawn alanı içerisinde rastgele konumlandırılır.
+- **Mesafe Hesaplaması:** `DistanceCalculator` scripti, sahnedeki tüm butonlar arasındaki mesafeleri hesaplayarak en uzun mesafeyi belirler.
+- **Kullanıcı Dostu Arayüz:** Çocukların kolayca kullanabilmesi için renkli ve sezgisel bir tasarım sunar.
 
-🛠Kod Bileşenleri🛠
+## 🛠 Kod Bileşenleri
 
-ButtonBehavior.cs
-Bu script, her bir butonun tıklanma olayını yönetir. Kullanıcı butona tıkladığında, DistanceCalculator kullanılarak buton çiftleri arasındaki en uzun mesafe hesaplanır. Eğer tıklanan buton çifti bu mesafeye eşitse, oyunun kazanıldığı kabul edilir; aksi halde kaybetme durumu işlenir.
+### `ButtonBehavior.cs`
 
-📄📄📄
+Bu script, her bir butonun tıklanma olayını yönetir. Kullanıcı butona tıkladığında, `DistanceCalculator` kullanılarak buton çiftleri arasındaki en uzun mesafe hesaplanır. Eğer tıklanan buton çifti bu mesafeye eşitse, oyunun kazanıldığı kabul edilir; aksi halde kaybetme durumu işlenir.
 
-csharp
-Kopyala
-Düzenle
+```csharp
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class ButtonBehavior : MonoBehaviour, IPointerClickHandler
 {
-    public DistanceCalculator distanceCalculator;  // DistanceCalculator referansı
+    public DistanceCalculator distanceCalculator;
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        // En uzun mesafe hesaplanır.
         float longestDistance = distanceCalculator.CalculateMaxDistance();
         Debug.Log(gameObject.name + " tıklandı. Hesaplanan en uzun mesafe: " + longestDistance);
         
-        // Örnek kazanma koşulu: tıklanan buton çiftinin mesafesi hesaplanan en uzun mesafeye eşitse.
-        // (Buraya kendi mantığınızı ekleyebilirsiniz.)
         if (/* tıklanan buton çiftinin mesafesi == longestDistance */ false)
         {
             Debug.Log("Oyunu kazandınız!");
-            // Örneğin, kazanma ekranına yönlendirme veya sahnenin yeniden yüklenmesi:
             UnityEngine.SceneManagement.SceneManager.LoadScene(
                 UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
         }
         else
         {
             Debug.Log("Oyunu kaybettiniz!");
-            // Kaybetme durumunda farklı işlemler yapılabilir.
         }
     }
 }
-ButtonSpawner.cs
+```
+
+### `ButtonSpawner.cs`
+
 Bu script, belirlenen alan içerisinde rastgele konumlarda butonlar oluşturur. Butonlar, oyunun başlangıcında spawn edilir.
 
-📄📄📄
-
-csharp
-Kopyala
-Düzenle
+```csharp
 using UnityEngine;
 
 public class ButtonSpawner : MonoBehaviour
 {
-    public GameObject buttonPrefab;      // Buton prefab'ı
-    public int buttonCount = 5;            // Oluşturulacak buton sayısı
-    public Vector3 spawnAreaSize = new Vector3(2, 2, 2);  // Rastgele konumların dağılım alanı
+    public GameObject buttonPrefab;
+    public int buttonCount = 5;
+    public Vector3 spawnAreaSize = new Vector3(2, 2, 2);
 
     void Start()
     {
@@ -81,25 +72,22 @@ public class ButtonSpawner : MonoBehaviour
     {
         for (int i = 0; i < buttonCount; i++)
         {
-            // AR ortamına uygun rastgele konum belirleniyor.
             Vector3 randomPos = new Vector3(
                 Random.Range(-spawnAreaSize.x / 2, spawnAreaSize.x / 2),
                 Random.Range(-spawnAreaSize.y / 2, spawnAreaSize.y / 2),
                 Random.Range(-spawnAreaSize.z / 2, spawnAreaSize.z / 2)
             );
-            // Buton instantiate ediliyor.
             Instantiate(buttonPrefab, randomPos, Quaternion.identity, transform);
         }
     }
 }
-DistanceCalculator.cs
-Bu script, sahnedeki tüm butonlar arasındaki mesafeleri hesaplar ve en uzun olan mesafeyi belirler. Hesaplanan değer, buton tıklama olayında referans olarak kullanılır.
+```
 
-📄📄📄
+### `DistanceCalculator.cs`
 
-csharp
-Kopyala
-Düzenle
+Bu script, sahnedeki tüm butonlar arasındaki mesafeleri hesaplar ve en uzun olan mesafeyi belirler.
+
+```csharp
 using UnityEngine;
 
 public class DistanceCalculator : MonoBehaviour
@@ -109,7 +97,6 @@ public class DistanceCalculator : MonoBehaviour
         GameObject[] buttons = GameObject.FindGameObjectsWithTag("Button");
         float maxDistance = 0f;
 
-        // Tüm buton çiftleri arasındaki mesafeler hesaplanır.
         for (int i = 0; i < buttons.Length; i++)
         {
             for (int j = i + 1; j < buttons.Length; j++)
@@ -125,45 +112,48 @@ public class DistanceCalculator : MonoBehaviour
         return maxDistance;
     }
 }
-🛠 Kullanılan Teknolojiler ve Araçlar 🛠
+```
 
-Unity: AR uygulamasının geliştirilmesinde kullanılan ana platform.
-Orevly Uygulaması: Projenin AR bileşenlerini entegre etmek için kullanılan araç.
-C#: Kodlama dili.
-AR Teknolojisi: Çocuklara yönelik etkileşimli deneyim sunmak için kullanılan teknoloji.
-Kurulum ve Çalıştırma
+## 🛠 Kullanılan Teknolojiler ve Araçlar
 
-QR Kod ile Uygulamaya Erişim:
+- **Unity**: AR uygulamasının geliştirilmesinde kullanılan ana platform.
+- **Orevly Uygulaması**: Projenin AR bileşenlerini entegre etmek için kullanılan araç.
+- **C#**: Kodlama dili.
+- **AR Teknolojisi**: Çocuklara yönelik etkileşimli deneyim sunmak için kullanılan teknoloji.
+
+## 📥 Kurulum ve Çalıştırma
+
+### QR Kod ile Uygulamaya Erişim
+
 Bu QR kodu, Overly App'i indirip projeye ulaşabilmeniz için kullanabilirsiniz.
-![QR_kodu](https://github.com/user-attachments/assets/db642dbc-3eca-4880-949b-6c278d5a18f3)
 
+![QR Kodu](https://github.com/MUSTAFAKARATAS0/AR-PROJECT/blob/main/QR_kodu.jpeg)
 
+### Projeyi Klonlayın
 
-🌐Web Sitesi🌐
-
-Portföy Sitem  https://karatasmustafa.com/
-
-Sitemin kaynak kodlarına buradan erişebiliriniz: https://github.com/MUSTAFAKARATAS0/site
-
-📥📥📥
-
-🎥🎥
-
-Projeyi Klonlayın:
 GitHub üzerindeki depodan projeyi bilgisayarınıza klonlayın.
 
-Unity Editor ile Açın:
+```
+git clone https://github.com/MUSTAFAKARATAS0/AR-PROJECT.git
+```
+
+### Unity Editor ile Açın
+
 Klonladığınız projeyi Unity Editor içerisinde açın.
 
-Orevly Entegrasyonu:
+### Orevly Entegrasyonu
+
 Projeyi Orevly uygulamasıyla entegre edin. (Detaylı entegrasyon dökümantasyonu, Orevly dokümanlarında mevcuttur.)
 
-Sahneyi Çalıştırın:
+### Sahneyi Çalıştırın
+
 Unity Editor içerisinde sahneyi çalıştırarak projeyi test edebilirsiniz.
 
-Bu proje, AR teknolojisiyle eğitim ve eğlenceyi birleştirerek çocuklara interaktif bir öğrenme deneyimi sunmayı amaçlamaktadır. Geri bildirimleriniz ve katkılarınız bizim için değerlidir!
+## 🌐 Web Sitesi 🌐
 
-📄📄📄
+[Portföy Sitem](https://karatasmustafa.com/)
 
-![WhatsApp Görsel 2025-02-09 saat 18 12 56_b2fa5513](https://github.com/user-attachments/assets/df68c8c8-0e85-45c5-b650-fc343178f27f)
+Sitemin kaynak kodlarına [buradan](https://github.com/MUSTAFAKARATAS0/site) erişebilirsiniz.
 
+---
+Bu proje, AR teknolojisiyle eğitim ve eğlenceyi birleştirerek çocuklara interaktif bir öğrenme deneyimi sunmayı amaçlamaktadır. Geri bildirimleriniz ve katkılarınız bizim için değerlidir! 🎮
