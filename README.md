@@ -127,11 +127,12 @@ Kurulum ve Çalıştırma
 
 QR Kod ile Uygulamaya Erişim:
 Bu QR kodu, Overly App'i indirip projeye ulaşabilmeniz için kullanabilirsiniz.
+![QR_kodu](https://github.com/user-attachments/assets/db642dbc-3eca-4880-949b-6c278d5a18f3)
 
 
 
 Web Sitesi:
-Portföy Sitem
+Portföy Sitem  https://karatasmustafa.com/
 
 Projeyi Klonlayın:
 GitHub üzerindeki depodan projeyi bilgisayarınıza klonlayın.
