@@ -123,6 +123,9 @@ public class DistanceCalculator : MonoBehaviour
 
 ## 📥 Kurulum ve Çalıştırma
 
+## 🎥 Proje Anlatım Videosu
+https://www.youtube.com/watch?v=uNnm31Hddm8&ab_channel=mustafakarata%C5%9F
+
 ### QR Kod ile Uygulamaya Erişim
 
 Bu QR kodu, Overly App'i indirip projeye ulaşabilmeniz için kullanabilirsiniz.
