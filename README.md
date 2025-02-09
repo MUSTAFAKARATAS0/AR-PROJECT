@@ -147,3 +147,8 @@ Sahneyi Çalıştırın:
 Unity Editor içerisinde sahneyi çalıştırarak projeyi test edebilirsiniz.
 
 Bu proje, AR teknolojisiyle eğitim ve eğlenceyi birleştirerek çocuklara interaktif bir öğrenme deneyimi sunmayı amaçlamaktadır. Geri bildirimleriniz ve katkılarınız bizim için değerlidir!
+
+
+
+![WhatsApp Görsel 2025-02-09 saat 18 12 56_b2fa5513](https://github.com/user-attachments/assets/df68c8c8-0e85-45c5-b650-fc343178f27f)
+
