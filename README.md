@@ -136,6 +136,7 @@ AR Teknolojisi: Çocuklara yönelik etkileşimli deneyim sunmak için kullanıla
 
 Kurulum ve Çalıştırma
 
+Bu qr code ile overly app indirdiğiniz telefonunuz ile taratarak projeye ulaşabilirsiniz. 
 
 ![QR_kodu](https://github.com/user-attachments/assets/8015b24f-8378-4669-b94c-78c40b35ea16)
 
