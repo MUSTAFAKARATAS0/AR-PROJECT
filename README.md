@@ -157,3 +157,7 @@ Sitemin kaynak kodlarına [buradan](https://github.com/MUSTAFAKARATAS0/site) eri
 
 ---
 Bu proje, AR teknolojisiyle eğitim ve eğlenceyi birleştirerek çocuklara interaktif bir öğrenme deneyimi sunmayı amaçlamaktadır. Geri bildirimleriniz ve katkılarınız bizim için değerlidir! 🎮
+
+
+![WhatsApp Görsel 2025-02-09 saat 18 12 56_b2fa5513](https://github.com/user-attachments/assets/c727b1d0-69c7-4c98-9b5a-3da4b324060b)
+
