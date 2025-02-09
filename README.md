@@ -1,6 +1,6 @@
 🚀 AR-DİSTANCE-PROJECT 🚀
 
-Proje Genel Bakışı
+📋Proje Genel Bakışı📋
 
 Hedef Kitle: Çocuklar
 Platform: Artırılmış Gerçeklik (AR) tabanlı eğitim uygulaması
@@ -15,10 +15,14 @@ Kaybeden Buton: Diğer durumlarda, oyuncu "Kaybettiniz" ekranına yönlendirilir
 Rastgele Buton Dağılımı: ButtonSpawner scripti ile butonlar, belirlenen spawn alanı içerisinde rastgele konumlandırılır.
 Mesafe Hesaplaması: DistanceCalculator scripti, sahnedeki tüm butonlar arasındaki mesafeleri hesaplayarak en uzun mesafeyi belirler.
 Kullanıcı Dostu Arayüz: Çocukların kolayca kullanabilmesi için renkli ve sezgisel bir tasarım sunar.
-Kod Bileşenleri
+
+
+🛠Kod Bileşenleri🛠
 
 ButtonBehavior.cs
 Bu script, her bir butonun tıklanma olayını yönetir. Kullanıcı butona tıkladığında, DistanceCalculator kullanılarak buton çiftleri arasındaki en uzun mesafe hesaplanır. Eğer tıklanan buton çifti bu mesafeye eşitse, oyunun kazanıldığı kabul edilir; aksi halde kaybetme durumu işlenir.
+
+📄📄📄
 
 csharp
 Kopyala
@@ -55,6 +59,8 @@ public class ButtonBehavior : MonoBehaviour, IPointerClickHandler
 ButtonSpawner.cs
 Bu script, belirlenen alan içerisinde rastgele konumlarda butonlar oluşturur. Butonlar, oyunun başlangıcında spawn edilir.
 
+📄📄📄
+
 csharp
 Kopyala
 Düzenle
@@ -88,6 +94,8 @@ public class ButtonSpawner : MonoBehaviour
 }
 DistanceCalculator.cs
 Bu script, sahnedeki tüm butonlar arasındaki mesafeleri hesaplar ve en uzun olan mesafeyi belirler. Hesaplanan değer, buton tıklama olayında referans olarak kullanılır.
+
+📄📄📄
 
 csharp
 Kopyala
@@ -131,9 +139,15 @@ Bu QR kodu, Overly App'i indirip projeye ulaşabilmeniz için kullanabilirsiniz.
 
 
 
-Web Sitesi:
+🌐Web Sitesi🌐
+
 Portföy Sitem  https://karatasmustafa.com/
+
 Sitemin kaynak kodlarına buradan erişebiliriniz: https://github.com/MUSTAFAKARATAS0/site
+
+📥📥📥
+
+🎥🎥
 
 Projeyi Klonlayın:
 GitHub üzerindeki depodan projeyi bilgisayarınıza klonlayın.
@@ -149,7 +163,7 @@ Unity Editor içerisinde sahneyi çalıştırarak projeyi test edebilirsiniz.
 
 Bu proje, AR teknolojisiyle eğitim ve eğlenceyi birleştirerek çocuklara interaktif bir öğrenme deneyimi sunmayı amaçlamaktadır. Geri bildirimleriniz ve katkılarınız bizim için değerlidir!
 
-
+📄📄📄
 
 ![WhatsApp Görsel 2025-02-09 saat 18 12 56_b2fa5513](https://github.com/user-attachments/assets/df68c8c8-0e85-45c5-b650-fc343178f27f)
 
