@@ -1,35 +1,25 @@
 🚀 AR-PROJECT 🚀
-Bu proje, AR teknolojisini kullanarak çocukların öğrenme deneyimini etkileşimli ve eğlenceli hale getirmeyi amaçlayan bir projedir. Bu proje, Orevly uygulamasıyla geliştirilmiş olup Unity platformunda çalışmaktadır.
 
 Proje Genel Bakışı
+
 Hedef Kitle: Çocuklar
 Platform: Artırılmış Gerçeklik (AR) tabanlı eğitim uygulaması
 Geliştirme Ortamı: Unity + Orevly Uygulaması
 Amaç: AR teknolojisi ile etkileşimli öğrenme deneyimi sunarak, çocukların tarih ve diğer eğitici konuları keşfetmelerini sağlamak.
 Temel Özellikler
-Interaktif AR Oyunları:
-Çocukların eğlenceli ve öğretici deneyimler yaşamalarını sağlayan dinamik AR oyunları.
 
-Dinamik Buton Mekaniği:
-Uygulamada, belirlenen alanda rastgele yerleştirilen butonlar arasında mesafe hesaplaması yapılır.
-
-Kazanan Buton:
-Buton çiftleri arasındaki mesafeler hesaplanır. Tıklanan buton çifti, hesaplanan en uzun mesafeye eşit olduğunda oyuncu "Kazandınız" ekranına yönlendirilir.
-Kaybeden Buton:
-Diğer durumlarda, oyuncu "Kaybettiniz" ekranına yönlendirilir.
-Rastgele Buton Dağılımı:
-ButtonSpawner scripti ile butonlar, belirlenen spawn alanı içerisinde rastgele konumlandırılır.
-
-Mesafe Hesaplaması:
-DistanceCalculator scripti, sahnedeki tüm butonlar arasındaki mesafeleri hesaplayarak en uzun mesafeyi belirler.
-
-Kullanıcı Dostu Arayüz:
-Çocukların kolayca kullanabilmesi için renkli ve sezgisel bir tasarım sunar.
-
+Interaktif AR Oyunları: Çocukların eğlenceli ve öğretici deneyimler yaşamalarını sağlayan dinamik AR oyunları.
+Dinamik Buton Mekaniği: Uygulamada, belirlenen alanda rastgele yerleştirilen butonlar arasında mesafe hesaplaması yapılır.
+Kazanan Buton: Buton çiftleri arasındaki mesafeler hesaplanır. Tıklanan buton çifti, hesaplanan en uzun mesafeye eşit olduğunda oyuncu "Kazandınız" ekranına yönlendirilir.
+Kaybeden Buton: Diğer durumlarda, oyuncu "Kaybettiniz" ekranına yönlendirilir.
+Rastgele Buton Dağılımı: ButtonSpawner scripti ile butonlar, belirlenen spawn alanı içerisinde rastgele konumlandırılır.
+Mesafe Hesaplaması: DistanceCalculator scripti, sahnedeki tüm butonlar arasındaki mesafeleri hesaplayarak en uzun mesafeyi belirler.
+Kullanıcı Dostu Arayüz: Çocukların kolayca kullanabilmesi için renkli ve sezgisel bir tasarım sunar.
 Kod Bileşenleri
+
 ButtonBehavior.cs
 Bu script, her bir butonun tıklanma olayını yönetir. Kullanıcı butona tıkladığında, DistanceCalculator kullanılarak buton çiftleri arasındaki en uzun mesafe hesaplanır. Eğer tıklanan buton çifti bu mesafeye eşitse, oyunun kazanıldığı kabul edilir; aksi halde kaybetme durumu işlenir.
-📋📋📋
+
 csharp
 Kopyala
 Düzenle
@@ -64,7 +54,7 @@ public class ButtonBehavior : MonoBehaviour, IPointerClickHandler
 }
 ButtonSpawner.cs
 Bu script, belirlenen alan içerisinde rastgele konumlarda butonlar oluşturur. Butonlar, oyunun başlangıcında spawn edilir.
-📋📋📋
+
 csharp
 Kopyala
 Düzenle
@@ -98,7 +88,7 @@ public class ButtonSpawner : MonoBehaviour
 }
 DistanceCalculator.cs
 Bu script, sahnedeki tüm butonlar arasındaki mesafeleri hesaplar ve en uzun olan mesafeyi belirler. Hesaplanan değer, buton tıklama olayında referans olarak kullanılır.
-📋📋📋
+
 csharp
 Kopyala
 Düzenle
@@ -127,26 +117,21 @@ public class DistanceCalculator : MonoBehaviour
         return maxDistance;
     }
 }
+🛠 Kullanılan Teknolojiler ve Araçlar 🛠
 
-
-
-🛠Kullanılan Teknolojiler ve Araçlar🛠
 Unity: AR uygulamasının geliştirilmesinde kullanılan ana platform.
 Orevly Uygulaması: Projenin AR bileşenlerini entegre etmek için kullanılan araç.
 C#: Kodlama dili.
 AR Teknolojisi: Çocuklara yönelik etkileşimli deneyim sunmak için kullanılan teknoloji.
-
-
 Kurulum ve Çalıştırma
 
-Bu qr code ile overly app indirdiğiniz telefonunuz ile taratarak projeye ulaşabilirsiniz. 
+QR Kod ile Uygulamaya Erişim:
+Bu QR kodu, Overly App'i indirip projeye ulaşabilmeniz için kullanabilirsiniz.
 
-![QR_kodu](https://github.com/user-attachments/assets/8015b24f-8378-4669-b94c-78c40b35ea16)
 
 
-🌐Web Sitesi🌐
-https://karatasmustafa.com/  bu link ile kendi yapmış olduğum portfolyo siteme ulaşabilirsiniz.
-
+Web Sitesi:
+Portföy Sitem
 
 Projeyi Klonlayın:
 GitHub üzerindeki depodan projeyi bilgisayarınıza klonlayın.
@@ -159,6 +144,5 @@ Projeyi Orevly uygulamasıyla entegre edin. (Detaylı entegrasyon dökümantasyo
 
 Sahneyi Çalıştırın:
 Unity Editor içerisinde sahneyi çalıştırarak projeyi test edebilirsiniz.
-
 
 Bu proje, AR teknolojisiyle eğitim ve eğlenceyi birleştirerek çocuklara interaktif bir öğrenme deneyimi sunmayı amaçlamaktadır. Geri bildirimleriniz ve katkılarınız bizim için değerlidir!
