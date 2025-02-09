@@ -1,4 +1,4 @@
-# AR-PROJECT
+🚀 AR-PROJECT 🚀
 Bu proje, AR teknolojisini kullanarak çocukların öğrenme deneyimini etkileşimli ve eğlenceli hale getirmeyi amaçlayan bir projedir. Bu proje, Orevly uygulamasıyla geliştirilmiş olup Unity platformunda çalışmaktadır.
 
 Proje Genel Bakışı
@@ -29,7 +29,7 @@ Kullanıcı Dostu Arayüz:
 Kod Bileşenleri
 ButtonBehavior.cs
 Bu script, her bir butonun tıklanma olayını yönetir. Kullanıcı butona tıkladığında, DistanceCalculator kullanılarak buton çiftleri arasındaki en uzun mesafe hesaplanır. Eğer tıklanan buton çifti bu mesafeye eşitse, oyunun kazanıldığı kabul edilir; aksi halde kaybetme durumu işlenir.
-
+📋📋📋
 csharp
 Kopyala
 Düzenle
@@ -64,7 +64,7 @@ public class ButtonBehavior : MonoBehaviour, IPointerClickHandler
 }
 ButtonSpawner.cs
 Bu script, belirlenen alan içerisinde rastgele konumlarda butonlar oluşturur. Butonlar, oyunun başlangıcında spawn edilir.
-
+📋📋📋
 csharp
 Kopyala
 Düzenle
@@ -98,7 +98,7 @@ public class ButtonSpawner : MonoBehaviour
 }
 DistanceCalculator.cs
 Bu script, sahnedeki tüm butonlar arasındaki mesafeleri hesaplar ve en uzun olan mesafeyi belirler. Hesaplanan değer, buton tıklama olayında referans olarak kullanılır.
-
+📋📋📋
 csharp
 Kopyala
 Düzenle
@@ -127,7 +127,10 @@ public class DistanceCalculator : MonoBehaviour
         return maxDistance;
     }
 }
-Kullanılan Teknolojiler ve Araçlar
+
+
+
+🛠Kullanılan Teknolojiler ve Araçlar🛠
 Unity: AR uygulamasının geliştirilmesinde kullanılan ana platform.
 Orevly Uygulaması: Projenin AR bileşenlerini entegre etmek için kullanılan araç.
 C#: Kodlama dili.
@@ -140,6 +143,9 @@ Bu qr code ile overly app indirdiğiniz telefonunuz ile taratarak projeye ulaşa
 
 ![QR_kodu](https://github.com/user-attachments/assets/8015b24f-8378-4669-b94c-78c40b35ea16)
 
+
+🌐Web Sitesi🌐
+https://karatasmustafa.com/  bu link ile kendi yapmış olduğum portfolyo siteme ulaşabilirsiniz.
 
 
 Projeyi Klonlayın:
