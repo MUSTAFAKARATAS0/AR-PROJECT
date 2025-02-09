@@ -132,7 +132,15 @@ Unity: AR uygulamasının geliştirilmesinde kullanılan ana platform.
 Orevly Uygulaması: Projenin AR bileşenlerini entegre etmek için kullanılan araç.
 C#: Kodlama dili.
 AR Teknolojisi: Çocuklara yönelik etkileşimli deneyim sunmak için kullanılan teknoloji.
+
+
 Kurulum ve Çalıştırma
+
+
+![QR_kodu](https://github.com/user-attachments/assets/8015b24f-8378-4669-b94c-78c40b35ea16)
+
+
+
 Projeyi Klonlayın:
 GitHub üzerindeki depodan projeyi bilgisayarınıza klonlayın.
 
@@ -145,7 +153,5 @@ Projeyi Orevly uygulamasıyla entegre edin. (Detaylı entegrasyon dökümantasyo
 Sahneyi Çalıştırın:
 Unity Editor içerisinde sahneyi çalıştırarak projeyi test edebilirsiniz.
 
-Lisans
-Bu proje, Apache Lisansı 2.0 kapsamında lisanslanmıştır. Daha fazla bilgi için lütfen LICENSE dosyasını inceleyiniz.
 
 Bu proje, AR teknolojisiyle eğitim ve eğlenceyi birleştirerek çocuklara interaktif bir öğrenme deneyimi sunmayı amaçlamaktadır. Geri bildirimleriniz ve katkılarınız bizim için değerlidir!
